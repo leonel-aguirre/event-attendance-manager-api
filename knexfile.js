@@ -2,15 +2,6 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 
-// eslint-disable-next-line no-console
-console.log('Database connection details:', {
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: 'event_attendance',
-  port: process.env.DB_PORT,
-})
-
 export default {
   development: {
     client: 'postgresql',
