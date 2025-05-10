@@ -1,4 +1,4 @@
-import Invitation from "../models/invitationModel.js"
+import Invitation from '../models/invitationModel.js'
 
 export const createInvitation = async (req, res, next) => {
   try {
@@ -16,7 +16,7 @@ export const checkIn = async (req, res, next) => {
     const { code } = req.body
     const result = await Invitation.checkIn(code)
 
-    if (!result) return res.status(404).json({ error: "Code not found" })
+    if (!result) return res.status(404).json({ error: 'Code not found' })
     res.json(result)
   } catch (err) {
     next(err)
