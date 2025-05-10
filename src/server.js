@@ -12,6 +12,10 @@ app.use(express.json())
 
 app.use('/api/invitations', invitationRoutes)
 
+app.use('/api/ping', (req, res) => {
+  res.json({ message: 'pong' })
+})
+
 const PORT = process.env.PORT || 3000
 
 // eslint-disable-next-line no-console
