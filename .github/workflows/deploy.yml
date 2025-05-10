@@ -2,7 +2,7 @@ name: Deploy to Cloud Run
 
 on:
   push:
-    branches: [main] # TODO: Change to main branch once ready.
+    branches: [project-setup] # TODO: Change to main branch once ready.
 
 jobs:
   deploy:
