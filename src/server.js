@@ -12,8 +12,8 @@ app.use(express.json())
 
 app.use('/api/invitations', invitationRoutes)
 
-app.use('/api/ping', (req, res) => {
-  res.json({ message: 'pong' })
+app.use('/api/ping', (_req, res) => {
+  res.json({ message: 'Test after GH actions deploy to Cloud Run' })
 })
 
 const PORT = process.env.PORT || 3000
