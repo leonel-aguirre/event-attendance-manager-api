@@ -4,7 +4,7 @@ import { generateCode } from '../utils/utils.js'
 const create = async ({ name, email }) => {
   const [guest] = await pg('guests').insert({ name, email }).returning('*')
 
-  const code = generateCode
+  const code = generateCode()
 
   const [invitation] = await pg('invitations')
     .insert({
