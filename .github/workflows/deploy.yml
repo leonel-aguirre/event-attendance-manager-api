@@ -27,3 +27,8 @@ jobs:
           service: event-attendance-manager-api
           region: ${{ vars.GCP_REGION }}
           source: .
+          env_vars: |
+            DB_HOST=${{ vars.DB_HOST }}
+            DB_USER=${{ secrets.DB_USER }}
+            DB_PASSWORD=${{ secrets.DB_PASSWORD }}
+            DB_PORT=${{ secrets.DB_PORT }}
